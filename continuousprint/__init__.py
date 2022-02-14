@@ -360,15 +360,15 @@ class ContinuousprintPlugin(
         # for details.
         return dict(
             continuousprint=dict(
-                displayName="Continuous Print Plugin",
+                displayName="Automation Queue Plugin",
                 displayVersion=self._plugin_version,
                 # version check: github repository
                 type="github_release",
-                user="Zinc-OS",
+                user="smartin015",
                 repo="continuousprint",
                 current=self._plugin_version,
                 stable_branch=dict(
-                    name="Stable", branch="master", comittish=["master"]
+                    name="Stable", branch="stable", comittish=["stable"]
                 ),
                 prerelease_branches=[
                     dict(
@@ -378,7 +378,7 @@ class ContinuousprintPlugin(
                     )
                 ],
                 # update method: pip
-                pip="https://github.com/Zinc-OS/continuousprint/archive/{target_version}.zip",
+                pip="https://github.com/smartin015/continuousprint/archive/{target_version}.zip",
             )
         )
     def add_permissions(*args, **kwargs):
@@ -420,7 +420,7 @@ class ContinuousprintPlugin(
             ),
         ]
 
-__plugin_name__ = "Continuous Print"
+__plugin_name__ = "Automation Queue"
 __plugin_pythoncompat__ = ">=3.6,<4"
 
 
